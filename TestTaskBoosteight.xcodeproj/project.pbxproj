@@ -12,8 +12,19 @@
 		6379C1FA2F20E1C6001136E2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6379C1F92F20E1C6001136E2 /* RxRelay */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6379C2412F20FD0A001136E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6379C1D42F20E057001136E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6379C1DB2F20E057001136E2;
+			remoteInfo = TestTaskBoosteight;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		6379C2282F20F6E8001136E2 /* TestTaskBoosteight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskBoosteight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6379C23D2F20FD0A001136E2 /* TestTaskBoosteightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTaskBoosteightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -35,6 +46,11 @@
 			path = TestTaskBoosteight;
 			sourceTree = "<group>";
 		};
+		6379C23E2F20FD0A001136E2 /* TestTaskBoosteightTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TestTaskBoosteightTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +64,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6379C23A2F20FD0A001136E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -56,6 +79,8 @@
 			children = (
 				6379C21F2F20F57A001136E2 /* TestTaskBoosteight */,
 				6379C2282F20F6E8001136E2 /* TestTaskBoosteight.app */,
+				6379C23D2F20FD0A001136E2 /* TestTaskBoosteightTests.xctest */,
+				6379C23E2F20FD0A001136E2 /* TestTaskBoosteightTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +112,29 @@
 			productReference = 6379C2282F20F6E8001136E2 /* TestTaskBoosteight.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6379C23C2F20FD0A001136E2 /* TestTaskBoosteightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6379C2452F20FD0A001136E2 /* Build configuration list for PBXNativeTarget "TestTaskBoosteightTests" */;
+			buildPhases = (
+				6379C2392F20FD0A001136E2 /* Sources */,
+				6379C23A2F20FD0A001136E2 /* Frameworks */,
+				6379C23B2F20FD0A001136E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6379C2422F20FD0A001136E2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6379C23E2F20FD0A001136E2 /* TestTaskBoosteightTests */,
+			);
+			name = TestTaskBoosteightTests;
+			packageProductDependencies = (
+			);
+			productName = TestTaskBoosteightTests;
+			productReference = 6379C23D2F20FD0A001136E2 /* TestTaskBoosteightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +147,10 @@
 				TargetAttributes = {
 					6379C1DB2F20E057001136E2 = {
 						CreatedOnToolsVersion = 26.2;
+					};
+					6379C23C2F20FD0A001136E2 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 6379C1DB2F20E057001136E2;
 					};
 				};
 			};
@@ -120,12 +172,20 @@
 			projectRoot = "";
 			targets = (
 				6379C1DB2F20E057001136E2 /* TestTaskBoosteight */,
+				6379C23C2F20FD0A001136E2 /* TestTaskBoosteightTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6379C1DA2F20E057001136E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6379C23B2F20FD0A001136E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -142,7 +202,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6379C2392F20FD0A001136E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6379C2422F20FD0A001136E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6379C1DB2F20E057001136E2 /* TestTaskBoosteight */;
+			targetProxy = 6379C2412F20FD0A001136E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6379C1F02F20E059001136E2 /* Debug */ = {
@@ -340,6 +415,48 @@
 			};
 			name = Release;
 		};
+		6379C2432F20FD0A001136E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 43JJRWSTM6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PashchenkoIvan.TestTaskBoosteightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestTaskBoosteight.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestTaskBoosteight";
+			};
+			name = Debug;
+		};
+		6379C2442F20FD0A001136E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 43JJRWSTM6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PashchenkoIvan.TestTaskBoosteightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestTaskBoosteight.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestTaskBoosteight";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -357,6 +474,15 @@
 			buildConfigurations = (
 				6379C1F02F20E059001136E2 /* Debug */,
 				6379C1F12F20E059001136E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6379C2452F20FD0A001136E2 /* Build configuration list for PBXNativeTarget "TestTaskBoosteightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6379C2432F20FD0A001136E2 /* Debug */,
+				6379C2442F20FD0A001136E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
