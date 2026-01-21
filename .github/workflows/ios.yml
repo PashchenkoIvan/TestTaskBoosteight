@@ -2,28 +2,24 @@ name: iOS CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build-and-test:
     runs-on: macos-15
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Select Xcode
+      - name: Select Xcode 16.4
         run: sudo xcode-select -s /Applications/Xcode_16.4.app
-
-      - name: Show Xcode version
-        run: xcodebuild -version
 
       - name: Resolve SPM
         run: xcodebuild -resolvePackageDependencies -project TestTaskBoosteight.xcodeproj -scheme TestTaskBoosteight
 
-      - name: Build & Test
+      - name: Build & Test (with xcresult)
         run: |
           set -o pipefail
           xcodebuild test \
@@ -31,5 +27,12 @@ jobs:
             -scheme TestTaskBoosteight \
             -destination "platform=iOS Simulator,name=iPhone 16,OS=latest" \
             -configuration Debug \
-            CODE_SIGNING_ALLOWED=NO \
-            | xcpretty
+            -resultBundlePath TestResults.xcresult \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Upload xcresult
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults-xcresult
+          path: TestResults.xcresult
